@@ -1,0 +1,112 @@
+/* =========================================
+   Global Styles
+   ========================================= */
+
+/* Sets the default font and centers the main content on the page */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;                  /* Prevents the site from getting too wide on huge screens */
+    margin: 0 auto;                     /* Centers the body content horizontally */
+    padding: 20px;                      /* Adds breathing room around the edges */
+    background-color: #f4f4f9;        /* A very light grey background for a modern look */
+    color: #333;                      /* A dark grey text */
+}
+
+/* Styles the main heading */
+h1{
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   Search & Filter Form
+   ========================================= */
+
+/* Centers and styles the form container */
+form{
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;                                /* Rounds the corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);          /* Adds a subtle shadow for depth */
+    margin-bottom: 30px;
+}
+
+/* Styles the input fields and buttons to look professional */
+input, select, button{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Makes the button stand out */
+button{
+    background-color: #3498db;          /* Professional Blue */
+    color: white;
+    border: none;
+    cursor: pointer;                      /* Changes mouse to a hand icon */
+    transition: background 0.3s           /* Color changes smoothly on hover */
+}
+
+/* Darkens the button when hovered */
+button:hover{
+    background-color: #2980b9;
+}
+
+/* =========================================
+   Gallery Grid Layout
+   ========================================= */
+
+/* The container that holds all project cards */
+.gallery-container{
+    display: grid;          /* Activates the CSS Grid layout engine */
+
+    /* 'repeat(auto-fit, ...)' means "fit as many columns as possible" */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));                                /* This line creates a responsive grid */
+    /* 'minmax(300px, 1fr)' means "columns must be at least 300px wide, but can stretch" */
+
+    gap: 25px;              /* Adds space between the grid items */
+}
+
+/* =========================================
+   Project Card Styles
+   ========================================= */
+
+/* The individual box for each project card*/
+.project-card{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);          /* Adds a "card" lift effect */
+    transition: transform 0.2s;                       /* Adds a smooth movement for hover effect */
+    display: flex;                                    /* Enables flexbox layout for content alignment */
+    flex-direction: column;                           /* Stacks content vertically */
+    justify-content: space-between;                   /* Spreads content out evenly */
+}
+
+/* Adds a slight "pop" effect when someone hovers over a card */
+.project-card:hover{
+    transform: translateY(-5px);                      /* Moves the card up slightly */
+}
+
+/* Ensures images fit perfectly inside the card */
+.project-card img, .project-card video{
+    width: 100%;                                      /* Forces the images to fit the container width */
+    height: 200px;                                    /* Sets a fixed height for uniformity */
+    object-fit: cover;                                /* Crops the image smartly so it doesn't look squished */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Styles the category label */
+.project-card h2{
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.project-card p{
+    line-height: 1.6;                                /* Improves the readability of the description */
+}

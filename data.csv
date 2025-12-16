@@ -1,0 +1,14 @@
+id,type,category,title,description,images
+1,image,Fashion,Orange Plaid Shirt,"A realistic 3D render of a button-down shirt with detailed fabric texture.",fashion4.jpg
+2,image,Fashion,White Basics Set,"A clean white tank top and shorts set showcasing soft cloth simulation.",fashion3.jpg
+3,image,Fashion,Fantasy & Casual,"A versatile collection featuring a blue shirt, pleated skirt, and fantasy outfit.",fashion1.jpg
+4,image,Fashion,Black Pleated Skirt,"High-fidelity 3D model of a black pleated skirt with realistic folds.",fashion5.jpg
+5,image,Fashion,Miniature Collection,"A creative set of miniature outfits including a tuxedo and panda jacket.",fashion2.jpg
+6,image,Toys,Knitted Pink Bear,"A close-up study of realistic knitted wool textures on a plush toy.",bear.jpg
+7,image,Toys,Teddy Bear Room,"A complete interior scene featuring two plush bears in a soft-lit bedroom.",room.jpg
+8,image,Food,Donut & Coffee,"A stylized food render featuring a pink frosted donut and glass coffee cup.",donut.jpg
+9,video,Food,Donut Turntable,"A cinematic turntable animation of three glazed donuts with lighting showcase.",video1.mp4
+10,video,Web Dev,The Shrine App,"A functional walkthrough of the custom 'Shrine' web application interface.",video5.mp4
+11,video,3D Logo,Warner Bros Intro,"A metallic 3D recreation of the iconic Warner Bros logo with dynamic lighting.",video2.mp4
+12,video,Animation,Library Escape,"A tense cinematic sequence of a character running through a giant library.",video3.mp4
+13,video,Nature,Secret Garden Door,"An atmospheric environment render of an old wooden door overgrown with vines.",video4.mp4
