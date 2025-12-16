@@ -8,6 +8,39 @@
   </head>
 
   <body>
+    <section class="hero-section">
+      <div class="estimator-container">
+        <h2>📋 Smart Interior Estimator</h2>
+        <p>Get a quick renovation estimate and avoid hidden costs.</p>
+
+        <div class="input-group">
+          <label for="room-size">Room Size (pyeong):</label>
+          <input type="number" id="room-size" placeholder="e.g. 24" min="1" />
+        </div>
+
+        <div class="input-group">
+          <label for="style-select">Style:</label>
+          <select id="style-select">
+            <option value="modern">Modern</option>
+            <option value="vintage">Vintage</option>
+            <option value="minimalist">Minimalist</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="material-grade">Material Grade:</label>
+          <select id="material-grade">
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
+
+        <button onclick="calculateEstimate()">Calculate Estimate</button>
+
+        <div id="result-display" style="display: none; margin-top: 20px"></div>
+      </div>
+    </section>
+
     <h1>Project Gallery</h1>
 
     <form action="/" method="GET" style="margin-bottom: 20px">
@@ -51,5 +84,53 @@
       </div>
       {% endfor %}
     </div>
+
+    <script>
+      function calculateEstimate() {
+        // Gets the values the user typed/selected
+        const size = document.getElementById("room-size").value;
+        const style = document.getElementById("style-select").value;
+        const grade = document.getElementById("material-grade").value;
+        const resultDisplay = document.getElementById("result-display");
+
+        // Simple Validation: Ensures the user entered a size
+        if (!size || size <= 0) {
+          alert("Please enter a valid room size!");
+          return;
+        }
+
+        // Defining the pricing logic (The Math)
+        const basePricePerPyeong = 1500000; // 1.5 Million KRW
+
+        let styleFactor = 1.0;
+        if (style === "vintage") styleFactor = 1.2; // 20% more expensive
+        if (style === "minimalist") styleFactor = 1.1; // 10% more expensive
+
+        let gradeFactor = 1.0;
+        if (grade === "premium") gradeFactor = 1.5; // 50% more expensive
+
+        // Calculates Total Cost
+        // Math: Size * Base * Style * Grade
+        const totalCost = size * basePricePerPyeong * styleFactor * gradeFactor;
+
+        // Generates a Context-Aware "Trust Tip"
+        let tipText = "Standard contracts include a 1-year defect warranty.";
+
+        if (grade === "premium") {
+          tipText =
+            "💡 <b>Pro Tip:</b> For premium materials, request a certificate of authenticity from the contractor.";
+        } else if (size > 30) {
+          tipText =
+            "💡 <b>Pro Tip:</b> For large renovations, we recommend using the Escrow payment protection service.";
+        }
+
+        // Displays the Result
+        // I used 'toLocaleString()' to add commas (e.g., 15,000,000)
+        resultDisplay.style.display = "block";
+        resultDisplay.innerHTML = `<div style="background: #f8f9fa; padding: 15px; border-left: 5px solid #3498db; text-align: left;">
+          <h3 style="margin: 0 0 10px 0; color: #2c3e50;">Estimated Cost: ₩${totalCost.toLocaleString()}</h3>
+          <p style="margin: 0; color: #555; font-size: 0.95rem;">${tipText}</p></div>`;
+      }
+    </script>
   </body>
 </html>

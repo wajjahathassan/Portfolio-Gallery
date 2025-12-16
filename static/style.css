@@ -110,3 +110,44 @@ button:hover{
 .project-card p{
     line-height: 1.6;                                /* Improves the readability of the description */
 }
+
+/* =========================================
+   (Smart Estimator Section)
+   ========================================= */
+
+.hero-section{
+    background-color: #e3f2fd;                    /* Light Blue for Trust */
+    padding: 40px 20px;                             /* Top/Bottom: 40px, Left/Right: 20px */
+    margin-bottom: 40px;                            /* Pushes the Gallery down */
+    text-align: center;                             /* Centers the text */
+}
+
+.estimator-container{
+    background: white;
+    max-width: 600px;                               /* Keeps it from getting too wide */
+    margin: 0 auto;                                 /* Centers the white box itself */
+    padding: 30px;
+    border-radius: 12px;                            /* Rounds the corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);       /* Creates the "Pop" effect */
+}
+
+/* Styles the input groups to stack neatly */
+.input-group{
+    margin-bottom: 15px;
+    text-align: left;                               /* Aligns labels to the left for readability */
+}
+
+.input-group label{
+    display: block;                                 /* Puts label on its own line */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.input-group input, .input-group select{
+    width: 100%;                                    /* Full width of the container */
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;                         /* Ensures padding doesn't break the width */
+}
