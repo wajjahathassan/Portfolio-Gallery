@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/style.css" />
+    <title>Portfolio Gallery</title>
+  </head>
+
+  <body>
+    <h1>Project Gallery</h1>
+
+    <form action="/" method="GET" style="margin-bottom: 20px">
+      <input type="text" name="query" placeholder="Check out my portfolio" />
+
+      <select name="category">
+        <option value="">All Categories</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Toys">Toys</option>
+        <option value="Food">Food</option>
+        <option value="Web Dev">Web Dev</option>
+        <option value="3D Logo">3D Logo</option>
+        <option value="Animation">Animation</option>
+        <option value="Nature">Nature</option>
+      </select>
+
+      <button type="submit">Filter</button>
+    </form>
+
+    <div class="gallery-container">
+      {% for project in projects %}
+      <div class="project-card">
+        <h2>{{ project.title }}</h2>
+
+        <p><strong>Category:</strong> {{ project.category }}</p>
+
+        {% if project.type == 'video' %}
+        <video controls>
+          <source src="static/images/{{ project.images }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {% else %}
+        <img
+          src="static/images/{{ project.images }}"
+          alt="{{ project.title }}"
+        />
+        {% endif %}
+
+        <p>{{ project.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
