@@ -32,8 +32,16 @@ A dynamic, data-driven web application built with Python (Flask) and Pandas. Thi
 - **Edit Content:** Simply modify `data.csv` to add new projects.
 - **Add Media:** Place your images/videos in `static/images/`.
 
+## 🆕 Update_v1
+
+This project goes beyond a standard portfolio by integrating a **Smart Interior Estimator**, designed to eliminate renovation uncertainty through real-time data visualization and cost transparency.
+
+## 🚀 Added_Features_v1
+
+- **Smart Interior Estimator:** An interactive tool that helps users calculate and visualize renovation costs, reducing planning anxiety with accurate, data-backed estimates.
+
 ## ⚖️ License & Usage Rights
 
 This project is open-source for educational purposes.
 
-**However, the media assets (images and videos)** located in the `static/images/` folder are the exclusive intellectual property of **Wajahat Hassan**. They are provided here for demonstration purposes only and may **not** be used, redistributed, commercialized, or modified without explicit written permission.
+**However, the media assets (images and videos)** located in the `static/images/` folder are the exclusive intellectual property of **Wajahat Hassan** except the placeholder images. They are provided here for demonstration purposes only and may **not** be used, redistributed, commercialized, or modified without explicit written permission.
